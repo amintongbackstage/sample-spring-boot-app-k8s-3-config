@@ -1,0 +1,19 @@
+kind: Route
+apiVersion: route.openshift.io/v1
+metadata:
+  name: sample-spring-boot-app-k8s-3
+  labels:
+    app: sample-spring-boot-app-k8s-3
+    app.kubernetes.io/component: sample-spring-boot-app-k8s-3
+    app.kubernetes.io/instance: sample-spring-boot-app-k8s-3
+    backstage.io/kubernetes-id: sample-spring-boot-app-k8s-3
+  annotations:
+    openshift.io/host.generated: 'true'
+spec:
+  to:
+    kind: Service
+    name: sample-spring-boot-app-k8s-3
+    weight: 100
+  port:
+    targetPort: http
+  wildcardPolicy: None
