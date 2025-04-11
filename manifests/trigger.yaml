@@ -52,23 +52,23 @@ spec:
       name: trigger-1
       template:
         ref: sample-spring-boot-app-k8s-3
----
-kind: Route
-apiVersion: route.openshift.io/v1
-metadata:
-  name: el-sample-spring-boot-app-k8s-3
-  labels:
-    app.kubernetes.io/instance: cicd-config
-    app.kubernetes.io/managed-by: EventListener
-    app.kubernetes.io/part-of: Triggers
-    eventlistener: sample-spring-boot-app-k8s-3
-  annotations:
-    openshift.io/host.generated: 'true'
-spec:
-  to:
-    kind: Service
-    name: el-sample-spring-boot-app-k8s-3
-    weight: 100
-  port:
-    targetPort: http-listener
-  wildcardPolicy: None
+# ---
+# kind: Route
+# apiVersion: route.openshift.io/v1
+# metadata:
+#   name: el-sample-spring-boot-app-k8s-3
+#   labels:
+#     app.kubernetes.io/instance: cicd-config
+#     app.kubernetes.io/managed-by: EventListener
+#     app.kubernetes.io/part-of: Triggers
+#     eventlistener: sample-spring-boot-app-k8s-3
+#   annotations:
+#     openshift.io/host.generated: 'true'
+# spec:
+#   to:
+#     kind: Service
+#     name: el-sample-spring-boot-app-k8s-3
+#     weight: 100
+#   port:
+#     targetPort: http-listener
+#   wildcardPolicy: None
