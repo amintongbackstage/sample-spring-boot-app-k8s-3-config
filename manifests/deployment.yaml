@@ -21,7 +21,7 @@ spec:
     spec:
       containers:
         - name: sample-spring-boot-app-k8s-3
-          image: //sample-spring-boot-app-k8s-3:1.0
+          image: amintongbackstage/sample-spring-boot-app-k8s-3:latest
           ports:
             - containerPort: 8080
               name: http
